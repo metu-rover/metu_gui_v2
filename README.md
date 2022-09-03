@@ -1,5 +1,7 @@
 # metu_gui_v2
 
+In order to start the GUI **rover_gui.py** should be runned.
+
 GUI might not work on Windows. Try using the following command inside the directory of the gui files.
 
 ```bash
@@ -14,6 +16,7 @@ Please contact the admin:
 
 
 ## TODO
+- [ ] Correct usage of Mixins will be searched.
 - [ ] Create a virtual environment and create requirements.txt accordingly.
 - [ ] Create a sample graph changing with ros.
 - [ ] Give graphs proper names.
