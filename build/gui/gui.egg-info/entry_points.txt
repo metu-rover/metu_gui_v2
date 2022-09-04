@@ -1,3 +1,4 @@
 [console_scripts]
-
+listener = gui.rover_gui:main
+talker = gui.ros2_test_message:main
 

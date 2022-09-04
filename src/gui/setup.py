@@ -20,6 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+                'talker = gui.ros2_test_message:main',
+                'listener = gui.rover_gui:main',
         ],
     },
 )

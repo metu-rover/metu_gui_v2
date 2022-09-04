@@ -5,6 +5,7 @@ gui/__init__.py
 gui/camera_input.py
 gui/general_input.py
 gui/initiator.py
+gui/ros2_test_message.py
 gui/rover_gui.py
 gui/science_input.py
 gui/ui.py
