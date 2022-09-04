@@ -1,0 +1,16 @@
+[0.536s] Invoking command in '/home/yoy/Desktop/metu_gui_v2/build/gui': PYTHONPATH=/home/yoy/Desktop/metu_gui_v2/install/gui/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/yoy/Desktop/metu_gui_v2/install/gui --editable --build-directory /home/yoy/Desktop/metu_gui_v2/build/gui/build --no-deps install_data --install-dir /home/yoy/Desktop/metu_gui_v2/install/gui
+[0.731s] running develop
+[0.854s] running egg_info
+[0.855s] writing gui.egg-info/PKG-INFO
+[0.855s] writing dependency_links to gui.egg-info/dependency_links.txt
+[0.855s] writing entry points to gui.egg-info/entry_points.txt
+[0.855s] writing requirements to gui.egg-info/requires.txt
+[0.855s] writing top-level names to gui.egg-info/top_level.txt
+[0.881s] reading manifest file 'gui.egg-info/SOURCES.txt'
+[0.881s] writing manifest file 'gui.egg-info/SOURCES.txt'
+[0.910s] running build_ext
+[0.910s] Creating /home/yoy/Desktop/metu_gui_v2/install/gui/lib/python3.8/site-packages/gui.egg-link (link to .)
+[0.911s] 
+[0.911s] Installed /home/yoy/Desktop/metu_gui_v2/build/gui
+[0.912s] running install_data
+[0.934s] Invoked command in '/home/yoy/Desktop/metu_gui_v2/build/gui' returned '0': PYTHONPATH=/home/yoy/Desktop/metu_gui_v2/install/gui/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/yoy/Desktop/metu_gui_v2/install/gui --editable --build-directory /home/yoy/Desktop/metu_gui_v2/build/gui/build --no-deps install_data --install-dir /home/yoy/Desktop/metu_gui_v2/install/gui

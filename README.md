@@ -1,13 +1,5 @@
 # metu_gui_v2
 
-In order to start the GUI **rover_gui.py** should be runned.
-
-GUI might not work on Windows. Try using the following command inside the directory of the gui files.
-
-```bash
-unix2dos *.py
-```
-
 Please contact the admin:
 * If you still can't open the GUI.
 * If you didn't understand the code.
