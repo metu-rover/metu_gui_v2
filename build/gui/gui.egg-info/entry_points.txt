@@ -1,0 +1,4 @@
+[console_scripts]
+listener = gui.subscriber_member_function:main
+talker = gui.publisher_member_function:main
+
