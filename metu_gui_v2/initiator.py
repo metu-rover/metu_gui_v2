@@ -17,6 +17,7 @@ except:
 class Initiator:
     def __init__(self, ui) -> None:
         self.ui = ui
+        self.ros_initiate()
 
     def ros_initiate(self):
         rclpy.init()
@@ -24,7 +25,7 @@ class Initiator:
         self.science_subscriber = GeneralI(self.ui)
 
         # ? So many things happen between rosnode create and ros spin. This might be bad practise.
-        self.general_thread_initiate()
+        #self.general_thread_initiate()
         self.science_thread_initiate()
 
     def general_thread_initiate(self):

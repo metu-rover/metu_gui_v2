@@ -19,8 +19,8 @@ class TestPublisher(Node):
         self.get_logger().info(f"Publishing: {msg.data}")
 
 
-def main(args=None):
-    rclpy.init(args=args)
+def main():
+    rclpy.init()
 
     minimal_publisher = TestPublisher()
 
