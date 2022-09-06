@@ -38,6 +38,7 @@ Please contact the admin:
 - [ ] Create a sample graph changing with ros.
 - [ ] Give graphs proper names.
 - [ ] Grey color theme is set.
+- [ ] Comment on the codes.
 - [x] Bare minimum ros2 integration is set and tested.
 - [ ] Make this TODO operations on a .txt file.
 - [x] Push github only the package, not the whole workspace.
