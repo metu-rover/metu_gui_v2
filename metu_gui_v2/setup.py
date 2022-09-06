@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'gui'
+package_name = 'metu_gui_v2'
 
 setup(
     name=package_name,
