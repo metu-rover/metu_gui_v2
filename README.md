@@ -33,14 +33,15 @@ Please contact the admin:
 
 
 ## TODO
+- [ ] Try publishing the PC camera view and subscribe it.
 - [ ] Correct usage of Mixins will be searched.
 - [ ] Create a virtual environment and create requirements.txt accordingly.
 - [ ] Create a sample graph changing with ros.
 - [ ] Give graphs proper names.
 - [ ] Grey color theme is set.
 - [ ] Comment on the codes.
-- [x] Bare minimum ros2 integration is set and tested.
 - [ ] Make this TODO operations on a .txt file.
+- [x] Bare minimum ros2 integration is set and tested.
 - [x] Push github only the package, not the whole workspace.
 - [x] Skeletons of Main, Camera, Science Mixins are created.
 - [x] RoverGui super class is created.
