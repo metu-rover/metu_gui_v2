@@ -2,6 +2,7 @@
 
 This repo is created as a metu_gui_v2 package.
 Download this repo in to your workspace/src <br />
+
 Final folder structure should be like below:
 - workspace
   - ...
@@ -13,6 +14,16 @@ Final folder structure should be like below:
       - package.xml
       - ...
     - ....
+
+In order to start the gui run the following commands in different terminals. Make sure that workspace is builded and sourced correctly.
+
+```bash
+ros2 run metu_gui_v2 talker
+```
+
+```bash
+ros2 run metu_gui_v2 listener
+```
 
 Please contact the admin:
 * If you still can't open the GUI.
