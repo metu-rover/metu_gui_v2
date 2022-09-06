@@ -1,5 +1,18 @@
 # metu_gui_v2
 
+This repo is created as a metu_gui_v2 package.
+Download this repo in to your workspace/src.
+Final folder structure should be like below:
+
+- workspace 
+  - src/
+    - metu_gui_v2
+      - metu_gui_v2
+      - setup.py
+      - package.xml
+      - ...
+    - ....
+
 Please contact the admin:
 * If you still can't open the GUI.
 * If you didn't understand the code.
