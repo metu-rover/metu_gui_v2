@@ -5,16 +5,17 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QThread
 
 try: 
-
+    # For standalone running
     from camera_input import CameraI
-    from general_input import GeneralI, Worker
+    from general_input import GeneralI, GeneralWorker
     from initiator import Initiator
     from science_input import ScienceI
     from ui import Ui_MainWindow
 
 except:
+    # For ros run
     from .camera_input import CameraI
-    from .general_input import GeneralI, Worker
+    from .general_input import GeneralI, GeneralWorker
     from .initiator import Initiator
     from .science_input import ScienceI
     from .ui import Ui_MainWindow
@@ -27,29 +28,23 @@ class RoverGUI(GeneralI, CameraI, ScienceI, Initiator):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self.MainWindow)
         self.MainWindow.show()
-        self.runLongTask()
+        self.general_thread()
         #CameraI.__init__(self, self.ui)
         #ScienceI.__init__(self, self.ui)
         #Initiator.__init__(self, self.ui)
 
 
-    def runLongTask(self):
+    def general_thread(self):
 
         self.thread = QThread()
-        self.worker = Worker(self.ui)
+        self.worker = GeneralWorker(self.ui)
         self.worker.moveToThread(self.thread)
 
         self.thread.started.connect(self.worker.run)
         self.worker.finished.connect(self.thread.quit)
         self.worker.finished.connect(self.worker.deleteLater)
         self.thread.finished.connect(self.thread.deleteLater)
-        self.worker.progress.connect(self.reportProgress)
-
         self.thread.start()
-
-
-    def reportProgress(self,num):
-        print(num)
 
 
 def main():
