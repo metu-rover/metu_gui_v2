@@ -1,7 +1,7 @@
 # metu_gui_v2
 
 This repo is created as a metu_gui_v2 package.
-Download this repo in to your workspace/src__
+Download this repo in to your workspace/src <br />
 Final folder structure should be like below:
 - workspace
   - ...
