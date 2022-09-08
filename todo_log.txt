@@ -1,7 +1,7 @@
 - [ ] Try publishing the PC camera view and subscribe it.
 - [ ] Correct usage of Mixins will be searched.
 - [ ] Create a virtual environment and create requirements.txt accordingly.
-- [ ] Create a sample graph changing with ros.
+- [x] Create a sample graph changing with ros.
 - [ ] Give graphs proper names.
 - [ ] Grey color theme is set.
 - [ ] Comment on the codes.

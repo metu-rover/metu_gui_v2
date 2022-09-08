@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="MainTab">
      <attribute name="title">
@@ -578,39 +578,9 @@
         <height>761</height>
        </rect>
       </property>
-      <layout class="QGridLayout" name="gridLayout">
+      <layout class="QGridLayout" name="ScienceGraphGrid">
        <item row="0" column="2">
-        <widget class="QLabel" name="Graph2">
-         <property name="styleSheet">
-          <string notr="true">background: red; margin: 20px</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="Graph">
-         <property name="styleSheet">
-          <string notr="true">background: red; margin: 20px</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLabel" name="Graph5">
-         <property name="styleSheet">
-          <string notr="true">background: red; margin: 20px</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="Graph4">
+        <widget class="QLabel" name="Graph3">
          <property name="styleSheet">
           <string notr="true">background: red; margin: 20px</string>
          </property>
@@ -629,8 +599,38 @@
          </property>
         </widget>
        </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="Graph4">
+         <property name="styleSheet">
+          <string notr="true">background: red; margin: 20px</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="Graph5">
+         <property name="styleSheet">
+          <string notr="true">background: red; margin: 20px</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="Graph">
+         <property name="styleSheet">
+          <string notr="true">background: red; margin: 20px</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
        <item row="0" column="1">
-        <widget class="QLabel" name="Graph3">
+        <widget class="QLabel" name="Graph2">
          <property name="styleSheet">
           <string notr="true">background: red; margin: 20px</string>
          </property>

@@ -1,7 +1,7 @@
 # metu_gui_v2
 
 This repo is created as a metu_gui_v2 package.
-Download this repo in to your workspace/src <br />
+Download this repo in to your workspace/src. Please do not commit to main branch without informing the admin. However, feel free to create new branch anytime you want. <br />
 
 Final folder structure should be like below:
 - workspace
@@ -36,7 +36,7 @@ Please contact the admin:
 - [ ] Try publishing the PC camera view and subscribe it.
 - [ ] Correct usage of Mixins will be searched.
 - [ ] Create a virtual environment and create requirements.txt accordingly.
-- [ ] Create a sample graph changing with ros.
+- [x] Create a sample graph changing with ros.
 - [ ] Give graphs proper names.
 - [ ] Grey color theme is set.
 - [ ] Comment on the codes.
@@ -44,11 +44,11 @@ Please contact the admin:
 
 
 ## Which file do what
-* camera_input : To be implemented
-* general_input : ros node for subscribing general input 
+* camera_input : To be implemented.
+* general_input : ros node for subscribing general input.
 * initiator : Class for initiating ros nodes, default ui configurations, QThreads.
 * ros_reciever_thread : QThread that initialize and spins the ros nodes.
 * ros_test_message : Sends a test data from a ros node.
 * rover_gui : Class that unifies all the operations (ui, ros ...).
-* science_input : ros node for subscribing science input 
+* science_input : ros node for subscribing science input.
 * ui : UI file generated from QT designer.
