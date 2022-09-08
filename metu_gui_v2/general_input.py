@@ -1,22 +1,5 @@
-import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float64MultiArray
-from PyQt5.QtCore import QObject, pyqtSignal
-
-
-class GeneralWorker(QObject):
-    
-    finished = pyqtSignal()
-
-    def __init__(self, ros_node) -> None:
-        super().__init__()
-        self.ros_node = ros_node
-        print("GeneralI node is initialized")
-
-    def run(self):
-
-        rclpy.spin(self.ros_node)
-        self.ros_node.destroy_node()
 
 
 class GeneralI(Node):

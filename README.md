@@ -40,9 +40,15 @@ Please contact the admin:
 - [ ] Give graphs proper names.
 - [ ] Grey color theme is set.
 - [ ] Comment on the codes.
-- [ ] Make this TODO operations on a .txt file.
-- [x] Bare minimum ros2 integration is set and tested.
-- [x] Push github only the package, not the whole workspace.
-- [x] Skeletons of Main, Camera, Science Mixins are created.
-- [x] RoverGui super class is created.
-- [x] GUI is designed from Berk Abim's pdf file.
+- [x] Make this TODO operations on a .txt file.
+
+
+## Which file do what
+* camera_input : To be implemented
+* general_input : ros node for subscribing general input 
+* initiator : Class for initiating ros nodes, default ui configurations, QThreads.
+* ros_reciever_thread : QThread that initialize and spins the ros nodes.
+* ros_test_message : Sends a test data from a ros node.
+* rover_gui : Class that unifies all the operations (ui, ros ...).
+* science_input : ros node for subscribing science input 
+* ui : UI file generated from QT designer.

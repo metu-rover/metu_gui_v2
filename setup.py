@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-                'talker = metu_gui_v2.ros2_test_message:main',
+                'talker = metu_gui_v2.ros_test_message:main',
                 'listener = metu_gui_v2.rover_gui:main',
         ],
     },
