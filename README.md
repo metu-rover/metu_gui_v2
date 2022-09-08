@@ -33,13 +33,17 @@ Please contact the admin:
 
 
 ## TODO
+- [ ] Launch file will be written.
+- [ ] Update inplace in matplotlib graphs will be implemented.
+- [ ] Callback_groups will be searched.
 - [ ] Try publishing the PC camera view and subscribe it.
 - [ ] Correct usage of Mixins will be searched.
 - [ ] Create a virtual environment and create requirements.txt accordingly.
-- [x] Create a sample graph changing with ros.
 - [ ] Give graphs proper names.
 - [ ] Grey color theme is set.
 - [ ] Comment on the codes.
+- [x] Spinning multiple ros nodes with executors.
+- [x] Create a sample graph changing with ros.
 - [x] Make this TODO operations on a .txt file.
 
 
