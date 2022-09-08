@@ -1,6 +1,6 @@
 # metu_gui_v2
 
-This repo is created as a metu_gui_v2 package.
+This repo is created as a metu_gui_v2 package by Yusuf Onat Yılmaz.
 Download this repo in to your workspace/src. Please do not commit to main branch without informing the admin. However, feel free to create new branch anytime you want. <br />
 
 Final folder structure should be like below:
@@ -45,7 +45,7 @@ Please contact the admin:
 - [x] Spinning multiple ros nodes with executors.
 - [x] Create a sample graph changing with ros.
 - [x] Make this TODO operations on a .txt file.
-
+- [x] ...
 
 ## Which file do what
 * camera_input : To be implemented.
