@@ -33,19 +33,16 @@ Please contact the admin:
 
 
 ## TODO
-- [ ] Luanching executors will be searched.
+- [ ] Launching executors will be searched.
 - [x] Launch file will be written.
 - [x] Update inplace in matplotlib graphs will be implemented.
 - [ ] Callback_groups will be searched.
 - [ ] Try publishing the PC camera view and subscribe it.
 - [ ] Correct usage of Mixins will be searched.
 - [ ] Create a virtual environment and create requirements.txt accordingly.
-- [ ] Give graphs proper names.
+- [x] Give graphs proper names.
 - [ ] Grey color theme is set.
-- [ ] Comment on the codes.
-- [x] Spinning multiple ros nodes with executors.
-- [x] Create a sample graph changing with ros.
-- [x] Make this TODO operations on a .txt file.
+- [x] Comment on the codes.
 - [x] ...
 
 ## Which file do what

@@ -18,7 +18,7 @@ class TestPublisher(Node):
 
     def timer_callback(self):
         msg = Float64MultiArray()
-        msg.data = [random.random()*180 for i in range(3)]
+        msg.data = [random.random()*180 for i in range(6)]
         self.publisher_.publish(msg)
         #self.get_logger().info(f"Publishing: {msg.data}")
 

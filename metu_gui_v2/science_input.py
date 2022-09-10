@@ -9,7 +9,8 @@ import random
 """
 Sample class for matplotlib usage in Pyqt. 
 """
-
+#TODO This class might be deprecated.
+#? This is only for figures it does not include titles, labels etc.
 class MplCanvas(FigureCanvasQTAgg):
 
     def __init__(self, parent=None, width=5, height=4, dpi=100):
@@ -21,80 +22,77 @@ class MplCanvas(FigureCanvasQTAgg):
 This class is for handling the science tab. Class itself is a ros node and it has access to ui.
 This class is mostly based on graphs.
 """
+
 class ScienceI(Node):
     def __init__(self, ui) -> None:
         self.ui = ui
 
         #? Grafiklere toolbar eklenebilir.
 
-        self.sc1 = MplCanvas(self, width=5, height=4, dpi=100)
-        self.sc2 = MplCanvas(self, width=5, height=4, dpi=100)
-        self.sc3 = MplCanvas(self, width=5, height=4, dpi=100)
-        self.sc4 = MplCanvas(self, width=5, height=4, dpi=100)
-        self.sc5 = MplCanvas(self, width=5, height=4, dpi=100)
-        self.sc6 = MplCanvas(self, width=5, height=4, dpi=100)
+        self.graphs = [MplCanvas(self, width=5, height=4, dpi=100) for i in range(6)]
 
         n_data = 50
-        self.xdata = list(range(n_data))
-        self.ydata = [random.randint(0, 180) for i in range(n_data)]
-        self._plot_ref = None # Only needed in the in-place draw
+        # These are not the ideal solutions but they are for test cases. So nvm. This graphs will be configured after the needs are set properly.
+        self.xdata = [list(range(n_data))for i in range(6)]
+        self.ydata = [[random.randint(0, 180) for i in range(n_data)] for i in range(6)]
+        self._plot_ref = [None for i in range(6)] # Only needed in the in-place draw
         self.update_plot()
 
-        self.sc2.axes.plot([0,1,2,3,4], [10,1,20,3,40])
-        self.sc3.axes.plot([0,1,2,3,4], [10,1,20,3,40])
-        self.sc4.axes.plot([0,1,2,3,4], [10,1,20,3,40])
-        self.sc5.axes.plot([0,1,2,3,4], [10,1,20,3,40])
-        self.sc6.axes.plot([0,1,2,3,4], [10,1,20,3,40])
 
-        self.ui.ScienceGraphGrid.addWidget(self.sc1, 0, 0, 1, 1)
-        self.ui.ScienceGraphGrid.addWidget(self.sc2, 0, 1, 1, 1)
-        self.ui.ScienceGraphGrid.addWidget(self.sc3, 0, 2, 1, 1)
-        self.ui.ScienceGraphGrid.addWidget(self.sc4, 1, 0, 1, 1)
-        self.ui.ScienceGraphGrid.addWidget(self.sc5, 1, 1, 1, 1)
-        self.ui.ScienceGraphGrid.addWidget(self.sc6, 1, 2, 1, 1)
+        self.ui.ScienceGraphGrid.addWidget(self.graphs[0], 0, 0, 1, 1)
+        self.ui.ScienceGraphGrid.addWidget(self.graphs[1], 0, 1, 1, 1)
+        self.ui.ScienceGraphGrid.addWidget(self.graphs[2], 0, 2, 1, 1)
+        self.ui.ScienceGraphGrid.addWidget(self.graphs[3], 1, 0, 1, 1)
+        self.ui.ScienceGraphGrid.addWidget(self.graphs[4], 1, 1, 1, 1)
+        self.ui.ScienceGraphGrid.addWidget(self.graphs[5], 1, 2, 1, 1)
 
         super().__init__('gui_science_test_subscriber')
         self.subscription = self.create_subscription(Float64MultiArray, 'topic', self.listener_callback, 10)
     
     def listener_callback(self, msg):
         #self.get_logger().info(f'I heard: {msg.data}')
-        self.update_plot(msg.data[0])
+        self.update_plot(msg.data)
 
 
     #* https://www.pythonguis.com/tutorials/plotting-matplotlib/ is implemented for the plots.
     #* clean method is slower but it allows change in the x axis. Combination of clean and inplace methods can be used.
 
-    '''
+    # TODO default num=0 is dirty
+
+    
     # Clean method
-    def update_plot(self, num=0):
+    def update_plot(self, num=None):
+        for i in range(len(self.ydata)):
         # Drop off the first x,y element, append a new one.
-        self.ydata = self.ydata[1:] + [num]
-        self.xdata = self.xdata[1:] + [self.xdata[-1]+1]
-        self.sc1.axes.cla()  # Clear the canvas.
-        self.sc1.axes.plot(self.xdata, self.ydata, 'r')
-        # Trigger the canvas to update and redraw.
-        self.sc1.draw()
-    '''
+            self.ydata[i] = self.ydata[i][1:] + [num[i]] if num != None else self.ydata[i]  # This line is terrible
+            self.xdata[i] = self.xdata[i][1:] + [self.xdata[i][-1]+1] if num != None else self.xdata[i] # This line is terrible
+            self.graphs[i].axes.cla()  # Clear the canvas.
+            self.graphs[i].axes.plot(self.xdata[i], self.ydata[i], 'r')
+            # Trigger the canvas to update and redraw.
+            self.graphs[i].draw()
+    
 
+    """
     # In-place method
-    def update_plot(self, num=0):
+    def update_plot(self, num=None):
         # Drop off the first x,y element, append a new one.
-        self.ydata = self.ydata[1:] + [num]
-        self.xdata = self.xdata[1:] + [self.xdata[-1]+1]
+        for i in range(len(self.ydata)):
+            self.ydata[i] = self.ydata[i][1:] + [num[i]] if num != None else self.ydata[i]  # This line is terrible
+            self.xdata[i] = self.xdata[i][1:] + [self.xdata[i][-1]+1] if num != None else self.ydata[i]  # This line is terrible
 
-        # Note: we no longer need to clear the axis.
-        if self._plot_ref is None:
-            # First time we have no plot reference, so do a normal plot.
-            # .plot returns a list of line <reference>s, as we're
-            # only getting one we can take the first element.
-            plot_refs = self.sc1.axes.plot(self.xdata, self.ydata, 'r')
-            self._plot_ref = plot_refs[0]
+            # Note: we no longer need to clear the axis.
+            if self._plot_ref[i] is None:
+                # First time we have no plot reference, so do a normal plot.
+                # .plot returns a list of line <reference>s, as we're
+                # only getting one we can take the first element.
+                plot_refs = self.graphs[i].axes.plot(self.xdata[i], self.ydata[i], 'r')
+                self._plot_ref[i] = plot_refs[0]
 
-        else:
-            # We have a reference, we can use it to update the data for that line.
-            #self._plot_ref.set_data(self.xdata,self.ydata)
-            self._plot_ref.set_ydata(self.ydata)
-            self._plot_ref.set_xdata(self.xdata)
-            print(len(self.xdata))
+            else:
+                # We have a reference, we can use it to update the data for that line.
+                #self._plot_ref.set_data(self.xdata,self.ydata)
+                self._plot_ref[i].set_ydata(self.ydata[i])
+                self._plot_ref[i].set_xdata(self.xdata[i])
 
-        self.sc1.draw()
+            self.graphs[i].draw()
+    """
