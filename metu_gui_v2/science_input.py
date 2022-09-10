@@ -7,7 +7,7 @@ from matplotlib.figure import Figure
 import random
 
 """
-Science 
+Sample class for matplotlib usage in Pyqt. 
 """
 
 class MplCanvas(FigureCanvasQTAgg):
@@ -17,7 +17,10 @@ class MplCanvas(FigureCanvasQTAgg):
         self.axes = fig.add_subplot(111)
         super(MplCanvas, self).__init__(fig)
 
-
+"""
+This class is for handling the science tab. Class itself is a ros node and it has access to ui.
+This class is mostly based on graphs.
+"""
 class ScienceI(Node):
     def __init__(self, ui) -> None:
         self.ui = ui
@@ -62,6 +65,7 @@ class ScienceI(Node):
     #* clean method is slower but it allows change in the x axis. Combination of clean and inplace methods can be used.
 
     '''
+    # Clean method
     def update_plot(self, num=0):
         # Drop off the first x,y element, append a new one.
         self.ydata = self.ydata[1:] + [num]
@@ -72,6 +76,7 @@ class ScienceI(Node):
         self.sc1.draw()
     '''
 
+    # In-place method
     def update_plot(self, num=0):
         # Drop off the first x,y element, append a new one.
         self.ydata = self.ydata[1:] + [num]

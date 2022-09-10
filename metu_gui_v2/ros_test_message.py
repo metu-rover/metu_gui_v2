@@ -4,6 +4,10 @@ from rclpy.node import Node
 from std_msgs.msg import Float64MultiArray
 import random
 
+"""
+Class for publishing test datas.
+"""
+
 class TestPublisher(Node):
 
     def __init__(self):

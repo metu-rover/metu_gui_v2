@@ -1,7 +1,9 @@
 from PyQt5.QtCore import QObject, pyqtSignal
 from rclpy.executors import MultiThreadedExecutor
 
-
+"""
+Class for spinning the nodes.
+"""
 class RecieverWorker(QObject):
     
     finished = pyqtSignal()
@@ -15,7 +17,10 @@ class RecieverWorker(QObject):
 
         #! Executor'u spinlendiği yerde tanımlamak lazım. Çünkü herhangi bir yerde self.executor yapınca hata veriyor.
         #! Teorime göre hali hazırda global bir executor var ve onla çakışıyor.
-        executor = MultiThreadedExecutor()
+        
+        # Executor is for adding multiple nodes at the same file. rospy.spin(node) allows only one node per executable file to run. 
+        # However with executor this functionality is extended.
+        executor = MultiThreadedExecutor() 
         executor.add_node(self.general_subscriber)
         executor.add_node(self.science_subscriber)
         executor.spin()
