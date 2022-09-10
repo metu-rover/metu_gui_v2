@@ -34,14 +34,14 @@ Please contact the admin:
 
 ## TODO
 - [ ] Launching executors will be searched.
-- [x] Launch file will be written.
-- [x] Update inplace in matplotlib graphs will be implemented.
 - [ ] Callback_groups will be searched.
 - [ ] Try publishing the PC camera view and subscribe it.
 - [ ] Correct usage of Mixins will be searched.
 - [ ] Create a virtual environment and create requirements.txt accordingly.
-- [x] Give graphs proper names.
 - [ ] Grey color theme is set.
+- [x] Launch file will be written.
+- [x] Update inplace in matplotlib graphs will be implemented.
+- [x] Give graphs proper names.
 - [x] Comment on the codes.
 - [x] ...
 
@@ -54,3 +54,6 @@ Please contact the admin:
 * rover_gui : Class that unifies all the operations (ui, ros ...).
 * science_input : ros node for subscribing science input.
 * ui : UI file generated from QT designer.
+
+## rqtgraph
+!["ros2 run rqtgraph rqtgraph"](/assets/nodes_topics.png)
