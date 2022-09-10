@@ -57,8 +57,6 @@ class ScienceI(Node):
     #* https://www.pythonguis.com/tutorials/plotting-matplotlib/ is implemented for the plots.
     #* clean method is slower but it allows change in the x axis. Combination of clean and inplace methods can be used.
 
-    # TODO default num=0 is dirty
-
     
     # Clean method
     def update_plot(self, num=None):
