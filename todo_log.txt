@@ -1,4 +1,4 @@
-- [ ] Launch file will be written.
+- [x] Launch file will be written.
 - [ ] Update inplace in matplotlib graphs will be implemented.
 - [ ] Callback_groups will be searched.
 - [ ] Try publishing the PC camera view and subscribe it.

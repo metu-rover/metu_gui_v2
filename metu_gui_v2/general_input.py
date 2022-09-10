@@ -13,4 +13,3 @@ class GeneralI(Node):
         self.ui.RollLCDNumber.display(msg.data[0])
         self.ui.PitchLCDNumber.display(msg.data[1])
         self.ui.YawLCDNumber.display(msg.data[2])
-

@@ -1,6 +1,5 @@
 import sys
 import rclpy
-from rclpy.node import Node
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 try: 

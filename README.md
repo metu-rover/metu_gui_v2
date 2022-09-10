@@ -33,8 +33,9 @@ Please contact the admin:
 
 
 ## TODO
-- [ ] Launch file will be written.
-- [ ] Update inplace in matplotlib graphs will be implemented.
+- [ ] Luanching executors will be searched.
+- [x] Launch file will be written.
+- [x] Update inplace in matplotlib graphs will be implemented.
 - [ ] Callback_groups will be searched.
 - [ ] Try publishing the PC camera view and subscribe it.
 - [ ] Correct usage of Mixins will be searched.

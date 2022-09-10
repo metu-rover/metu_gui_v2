@@ -16,7 +16,7 @@ class TestPublisher(Node):
         msg = Float64MultiArray()
         msg.data = [random.random()*180 for i in range(3)]
         self.publisher_.publish(msg)
-        self.get_logger().info(f"Publishing: {msg.data}")
+        #self.get_logger().info(f"Publishing: {msg.data}")
 
 
 def main():

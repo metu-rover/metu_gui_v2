@@ -19,3 +19,5 @@ class RecieverWorker(QObject):
         executor.add_node(self.general_subscriber)
         executor.add_node(self.science_subscriber)
         executor.spin()
+        self.general_subscriber.destroy_node()
+        self.science_subscriber.destroy_node()
