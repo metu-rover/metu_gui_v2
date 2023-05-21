@@ -178,7 +178,7 @@ class Ui_MainWindow(object):
         self.MainCameraGroupBox.setObjectName("MainCameraGroupBox")
         self.MainCamera = QtWidgets.QLabel(self.MainCameraGroupBox)
         self.MainCamera.setGeometry(QtCore.QRect(10, 40, 651, 701))
-        self.MainCamera.setStyleSheet("background : red")
+        self.MainCamera.setStyleSheet("background : white")
         self.MainCamera.setText("")
         self.MainCamera.setObjectName("MainCamera")
         self.EndEffectorCameraGroupBox = QtWidgets.QGroupBox(self.CameraTab)
@@ -278,6 +278,8 @@ class Ui_MainWindow(object):
         self.ScienceHubCameraGroupBox.setTitle(_translate("MainWindow", "Science Hub Camera"))
         self.TheTab.setTabText(self.TheTab.indexOf(self.CameraTab), _translate("MainWindow", "Camera"))
         self.TheTab.setTabText(self.TheTab.indexOf(self.ScienceTab), _translate("MainWindow", "Science Unit"))
+         
+
 
 
 if __name__ == "__main__":
